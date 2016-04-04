@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @media screen and (max-width: 640px){
+            .flex-item{
+                order:1;
+            }
+
+            .square4{
+                order:0;
+            }
+
+            .flex{
+                align-items: flex-start;
+                justify-content:space-between;
+                align-content:space-between;
+            }
+        }
+
+
+        @media screen and (min-width: 641px){
+            .flex{
+                justify-content:space-between;
+                align-items:center;
+            }
+        }
+
+        .flex{
+            padding:10px;
+            display:flex;
+            flex-flow:row;
+            flex-wrap:wrap;
+            height:500px;  /*便于观察多行flex元素排列即align-content的效果*/
+
+
+        }
+        .flex-item{
+            box-sizing: border-box;
+            width:150px;
+            background:#f00;
+
+        }
+        .square1{
+            height:120px;
+        }
+        .square2{
+            height:100px;
+        }
+        .square3{
+            height:40px;
+        }
+        .square4{
+            height:200px;
+            background: #00f;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div class="flex-item square1"></div>
+        <div class="flex-item square2"></div>
+        <div class="flex-item square3"></div>
+        <div class="flex-item square4"></div>
+    </div>
+</body>
+</html>

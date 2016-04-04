@@ -1,0 +1,50 @@
+*{margin:0;padding:0;border:0;outline:0;}
+
+
+html,body,.wrapper{height:100%;width:100%;}
+
+
+
+.wrapper{
+    text-align:center;
+    display:table;
+}
+
+
+.container{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+
+.box{
+    margin:0 auto;
+    width:400px;
+    height:200px;
+    position:relative;
+    background: #000000;
+    overflow:hidden;}
+
+
+.circle{
+
+    width:100px;
+    height:100px;
+    border-radius:50px;
+    background:#fc0;
+}
+
+.left{
+    position:absolute;
+    top:-50px;
+    left:-50px;
+    }
+
+.right{
+    position:absolute;
+    bottom:-50px;
+    right:-50px;
+}
+
+
