@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <div id="form1">
+
+        </div>
+        <div id="form2">
+
+        </div>
+        <script src="whole.js"></script>
+        <script>
+            var config1 = [
+                {
+                    label:"用户名",
+                    element:"input",
+                    type:"text",
+                    message:{
+                        rule:"数字字母下划线组成，数组不能开头", //默认正则的遵守规则
+                        empty:this.label + "不能为空",
+                        short: "长度不能小于" + 4,
+                        long: "长度不能超过" + 16
+                    },
+                    validatorItems:{
+                        username:"",  //空表示使用表单工厂默认提供的正则表达式
+                        minlength:4,
+                        maxlength:16,
+                        necessary:true
+                    },
+                    placeholder:"请填写正确格式的用户名"
+                },
+                {
+                    label:"密码",
+                    element:"input",
+                    type:"password",
+                    message:{
+                        rule:"数字字母下划线组成，数组不能开头",
+                        empty:this.label + "不能为空",
+                        short:"长度不能小于" +  8 ,
+                        long:"长度不能超过" + 16
+                    },
+                    validatorItems:{
+                        password:"",
+                        minlength:8,
+                        maxlength:16,
+                        necessary:true
+                    },
+                    placeholder:"请输入正确格式用户名"
+                },
+                {
+                    label:"确认密码",
+                    element:"input",
+                    type:"password",
+                    message:{
+                        rule:"密码不一致"
+                    },
+                    validatorItems:{
+                        passwordAgain:true
+                    }
+                },
+                {
+                    label:"邮箱",
+                    element:"input",
+                    type:"text",
+                    message:{
+                        rule:"请输入正确格式邮箱"
+                    },
+                    validatorItems:{
+                        email:true
+                    }
+                },
+
+            ];
+
+            var config2 =[
+                {
+                    label:"用户名",
+                    element:"input",
+                    type:"text",
+                    message:{
+                        rule:"数字字母下划线组成，数组不能开头",
+                        empty:this.label + "不能为空",
+                        short: "长度不能小于" + 4,
+                        long: "长度不能超过" + 16
+                    },
+                    validatorItems:{
+                        username:"",  //空表示使用表单工厂默认提供的正则表达式
+                        minlength:4,
+                        maxlength:16,
+                        necessary:true
+                    },
+                    placeholder:"请填写正确格式的用户名"
+                },
+                {
+                    label:"密码",
+                    element:"input",
+                    type:"password",
+                    message:{
+                        rule:"数字字母下划线组成，数组不能开头",
+                        empty:this.label + "不能为空",
+                        short:"长度不能小于" +  8 ,
+                        long:"长度不能超过" + 16
+                    },
+                    validatorItems:{
+                        password:"",
+                        minlength:8,
+                        maxlength:16,
+                        necessary:true
+                    },
+                    placeholder:"请输入正确格式用户名"
+                }
+
+            ];
+
+
+
+            //将每个表单元素作为一个整体，初始化
+            var form1 = document.getElementById("form1");
+            var form2 = document.getElementById("form2");
+
+            var formproducts1 = [];
+            var formproducts2 = [];
+            for(var i = 0 ;i < config1.length; i++){
+                formproducts1[i] = new FormFactory(config1[i],form1);
+                formproducts1[i].init();
+            }
+
+            for(var i = 0 ;i < config2.length; i++){
+                formproducts2[i] = new FormFactory(config2[i],form2);
+                formproducts2[i].init();
+            }
+        </script>
+</body>
+</html>
