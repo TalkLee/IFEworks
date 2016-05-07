@@ -1,0 +1,91 @@
+*{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+}
+input{
+    border:1px solid;
+}
+
+
+.selectContainer,.CalendarTable{
+    padding:10px 0;
+    width:240px;
+    text-align:center;
+
+}
+
+.selectContainer{
+    background: #C61B01;
+}
+
+
+
+.yearSelect:after{
+    content:'年';
+    font-weight:900;
+    color:#000;
+}
+.usermonthSelect{
+
+    margin-left:15px;
+}
+.usermonthSelect:after{
+    content:'月';
+    font-weight:900;
+    color:#000;
+
+}
+.prev,.next{
+    cursor: pointer;
+}
+
+
+.prev{
+    float:left;
+
+}
+
+.next{
+    float:right;
+}
+
+
+
+.CalendarTable thead *{
+    margin:0;
+    padding:0;
+    outline:0;
+    border:0;
+}
+
+.CalendarTable thead tr td{
+    font-weight:600;
+    text-align:center;
+}
+
+
+
+.CalendarTable thead tr td:nth-child(6n+1){ /*日 六为红色*/
+    color:#BD3235;
+}
+
+
+tbody tr td:hover{
+    background:#BD3235;
+    cursor: pointer;
+    text-align:center;
+
+}
+
+table{
+
+    border-collapse:collapse;
+
+}
+tbody tr td{
+    padding:2px;
+    border:1px solid #ccc;
+
+}
